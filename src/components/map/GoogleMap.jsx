@@ -12,7 +12,7 @@ const GoogleMapContainer = () => {
     lng: -122.4194,
   };
   return (
-    <div className="col-span-12 2xl:col-span-6 my-8 w-1/2 items-center justify-center ml-auto mr-0">
+    <div className="col-span-12 2xl:col-span-6 w-full items-center justify-center ml-auto mr-0">
       <div className="bg-white dark:bg-box-dark m-0 p-0 text-body dark:text-subtitle-dark text-[15px] rounded-10 relative h-full">
         <div className="px-[25px] text-dark dark:text-title-dark font-medium text-[17px] flex flex-wrap items-center justify-between max-sm:flex-col max-sm:h-auto max-sm:mb-[15px]">
           <h1 className="mb-0 inline-flex items-center py-[16px] overflow-hidden whitespace-nowrap text-ellipsis text-[18px] font-semibold text-dark dark:text-title-dark capitalize">

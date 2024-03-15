@@ -1,52 +1,6 @@
 import React, { useState } from "react";
-
+import { teamMembersData } from "../../mock/TableData";
 const TeamMembers = () => {
-    const teamMembersData = [
-        {
-          id: 1,
-          name: "Duran Clayton",
-          image: "images/sellers/10.png",
-          status: "online",
-        },
-        {
-          id: 2,
-          name: "John Doe",
-          image: "images/sellers/11.png",
-          status: "offline",
-        },
-        {
-          id: 3,
-          name: "Jane Smith",
-          image: "images/sellers/12.png",
-          status: "online",
-        },
-        {
-          id: 4,
-          name: "Emily Johnson",
-          image: "images/sellers/13.png",
-          status: "offline",
-        },
-        {
-          id: 5,
-          name: "Michael Brown",
-          image: "images/sellers/14.png",
-          status: "online",
-        },
-        {
-          id: 6,
-          name: "Sophia Wilson",
-          image: "images/sellers/15.png",
-          status: "offline",
-        },
-        {
-          id: 7,
-          name: "William Lee",
-          image: "images/sellers/16.png",
-          status: "online",
-        },
-      ];
-      
-
   const [addedMembers, setAddedMembers] = useState([]);
 
   const handleButtonClick = (memberId) => {
@@ -61,7 +15,7 @@ const TeamMembers = () => {
 
   return (
     <>
-      <div className="col-span-12 3xl:col-span-4 2xl:col-span-6 my-7">
+      <div className="col-span-12 3xl:col-span-4 2xl:col-span-6 ">
         <div className="bg-white dark:bg-box-dark m-0 p-0 text-body dark:text-subtitle-dark text-[15px] rounded-10 relative h-full">
           <div className="px-[25px] text-dark dark:text-title-dark font-medium text-[17px] flex flex-wrap items-center justify-between max-sm:flex-col max-sm:h-auto">
             <h2 className="mb-0 inline-flex items-center py-[16px] max-sm:pb-[5px] overflow-hidden whitespace-nowrap text-ellipsis text-[18px] font-semibold text-dark dark:text-title-dark capitalize">
@@ -97,23 +51,20 @@ const TeamMembers = () => {
                     </div>
                   </div>
                   <button
-  type="button"
-  className={`toggle-active text-primary border-primary/[.07] text-[13px] font-semibold px-[12px] hover:text-white ${
-    addedMembers.includes(member.id)
-      ? 'bg-purple-600 text-white' // Background color and text color when member is added
-      : 'bg-primary/[.07]' // Default background color
-  } transition-all duration-300 border-none rounded-3 [&.active]:bg-primary [&.active]:text-white h-[32px] rounded-4 group`}
-  onClick={() => handleButtonClick(member.id)}
->
-  {/* Conditional rendering based on whether the member is added */}
-  {addedMembers.includes(member.id) ? (
-    <span className="group-[.active]:block"> Added </span>
-  ) : (
-    <span className="group-[.active]:hidden"> Add </span>
-  )}
-</button>
-
-
+                    type="button"
+                    className={`toggle-active text-primary border-primary/[.07] text-[13px] font-semibold px-[12px] hover:text-white ${
+                      addedMembers.includes(member.id)
+                        ? "bg-purple-600 text-white"
+                        : "bg-primary/[.07]"
+                    } transition-all duration-300 border-none rounded-3 [&.active]:bg-primary [&.active]:text-white h-[32px] rounded-4 group`}
+                    onClick={() => handleButtonClick(member.id)}
+                  >
+                    {addedMembers.includes(member.id) ? (
+                      <span className="group-[.active]:block"> Added </span>
+                    ) : (
+                      <span className="group-[.active]:hidden"> Add </span>
+                    )}
+                  </button>
                 </li>
               ))}
             </ul>

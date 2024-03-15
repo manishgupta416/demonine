@@ -319,3 +319,37 @@ export const tabsContent1 = [
         imgSrc: 'images/sellers/28.png',
       },
     ]}
+
+    export const teamMembersData = [
+      {
+        id: 1,
+        name: "Duran Clayton",
+        image: "images/sellers/10.png",
+        status: "online",
+      },
+      {
+        id: 2,
+        name: "John Doe",
+        image: "images/sellers/11.png",
+        status: "offline",
+      },
+      {
+        id: 3,
+        name: "Jane Smith",
+        image: "images/sellers/12.png",
+        status: "online",
+      },
+      {
+        id: 4,
+        name: "Emily Johnson",
+        image: "images/sellers/13.png",
+        status: "offline",
+      },
+      {
+        id: 5,
+        name: "Michael Brown",
+        image: "images/sellers/14.png",
+        status: "online",
+      }
+    ];
+    

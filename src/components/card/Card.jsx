@@ -3,7 +3,7 @@ import {cardsData} from "../../mock/CardData";
 const Card = () => {
   return (
     <>
-      <div className="col-span-12 3xl:col-span-4 2xl:col-span-12 m-4">
+      <div className="col-span-12 3xl:col-span-4 2xl:col-span-12 ">
         <div className="grid grid-cols-12 gap-4">
           {cardsData.map((card, index) => (
             <div className="col-span-12 xs:col-span-6" key={index}>
